@@ -1,0 +1,20 @@
+<h1>These are all the cats</h1>
+
+<a href="<%=new_cat_url%>">Create a new cat</a>
+
+<ul>
+    <% @cats.each do |cat| %>
+    <li>
+        <a href="<%=cat_url(cat.id)%>">User Show Link</a>
+        <ul>
+            <li><%=cat.name %></li>
+            <li><%=cat.color %></li>
+            <li><%=cat.sex %></li>
+            <li><%=cat.age %></li>
+            <li><%=cat.description %></li>
+        </ul>
+        <a href="<%=edit_cat_url(cat.id)%>">Edit this cat</a>
+        <p></p>
+    </li>
+    <% end %>
+</ul>
